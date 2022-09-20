@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    lateinit var dataStoreManager: DataStoreManager
+    private lateinit var dataStoreManager: DataStoreManager
     private lateinit var viewModel: MainViewModel
     
     //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
