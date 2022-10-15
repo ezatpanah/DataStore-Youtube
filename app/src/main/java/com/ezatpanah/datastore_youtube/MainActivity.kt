@@ -41,19 +41,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkThemeMode() {
-        viewModel.getTheme.observe(this@MainActivity) { isDarkMode ->
-            when (isDarkMode) {
-                true -> {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-                    binding.modeSwitch.isChecked = true
-                    binding.tvStatus.text = "Dark Mode"
-                    //binding.ivMain.setImageResource(R.drawable.ic_moon)
-                }
-                false -> {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-                    binding.modeSwitch.isChecked = false
-                    binding.tvStatus.text = "Light Mode"
-                    //binding.ivMain.setImageResource(R.drawable.ic_sun)
+        binding.apply {
+            viewModel.getTheme.observe(this@MainActivity) { isDarkMode ->
+                when (isDarkMode) {
+                    true -> {
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                        modeSwitch.isChecked = true
+                        imgStatus.setAnimation(R.raw.night)
+                    }
+                    false -> {
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                        modeSwitch.isChecked = false
+                        imgStatus.setAnimation(R.raw.day)
+                    }
                 }
             }
         }
