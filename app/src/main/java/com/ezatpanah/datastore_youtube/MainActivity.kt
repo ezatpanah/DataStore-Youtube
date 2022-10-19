@@ -15,10 +15,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var dataStoreManager: DataStoreManager
     private lateinit var viewModel: MainViewModel
     
-    //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-    //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-    //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -47,11 +43,13 @@ class MainActivity : AppCompatActivity() {
                     true -> {
                         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                         modeSwitch.isChecked = true
+                        modeSwitch.text="Dark Mode"
                         imgStatus.setAnimation(R.raw.night)
                     }
                     false -> {
                         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
                         modeSwitch.isChecked = false
+                        modeSwitch.text="Light Mode"
                         imgStatus.setAnimation(R.raw.day)
                     }
                 }
