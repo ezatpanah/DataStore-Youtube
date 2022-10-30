@@ -2,8 +2,6 @@
 <img alt="Ezatpanah  DataStore-Youtube" src="https://emojipedia-us.s3.amazonaws.com/content/2020/04/05/yt.png" width="3%"></a>
 
 YouTube Video :
-
-Part 3
 <br>  
 <a href="https://youtu.be/RQKP7TtiOrU" target="_blank"><img alt="Ezatpanah  DataStore-Youtube" src="datastore.jpg" width="60%"></a>
 <br>
